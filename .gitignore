@@ -17,5 +17,11 @@
 /yarn-error.log
 
 .byebug_history
-.DS_Store
 .idea
+
+# Exclude coverage reports from version control
+coverage/
+coverage/*
+
+# OSX files
+.DS_Store
