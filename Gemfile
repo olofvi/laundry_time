@@ -18,6 +18,7 @@ gem 'pry'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'coveralls', require: false
 end
 
 group :development do
