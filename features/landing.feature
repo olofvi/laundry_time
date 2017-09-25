@@ -5,4 +5,4 @@ Feature: User can go to landing page
 
   Scenario:
     Given I navigate to the index page
-    Then I should see the text "welcome"
+    Then I should see the text "Welcome"
