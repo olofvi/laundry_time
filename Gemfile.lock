@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/CraftAcademy/acts_as_bookable
+  revision: 29dae8234724685ac12adaadaeca5a3bf614b442
+  branch: master
+  specs:
+    acts_as_bookable (0.1.2)
+      activerecord (~> 5.1, >= 5.1.2)
+      ice_cube_chosko (~> 0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -103,6 +112,7 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.6)
+    ice_cube_chosko (0.1.1)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -251,6 +261,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_bookable!
   coffee-rails (~> 4.2)
   coveralls
   cucumber-rails
