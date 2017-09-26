@@ -12,8 +12,8 @@ git clone https://github.com/CraftAcademy/laundry_time.git
 
 ### Prerequisites
 
-..* ruby 2.4.0
-..* rails 5.1.4
+  * ruby 2.4.0
+  * rails 5.1.4
 
 
 ### Installing
