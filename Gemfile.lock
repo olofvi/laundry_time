@@ -133,6 +133,9 @@ GEM
     pry (0.11.0)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
+    pry-byebug (3.5.0)
+      byebug (~> 9.1)
+      pry (~> 0.10)
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
@@ -248,7 +251,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   coffee-rails (~> 4.2)
   coveralls
   cucumber-rails
@@ -257,7 +259,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
-  pry
+  pry-byebug
   puma (~> 3.7)
   rails (~> 5.1.4)
   rspec-rails
