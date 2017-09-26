@@ -23,7 +23,7 @@ Run bundle install to install dependencies.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+Run rake to see all the tests pass. 
 
 ### Break down into end to end tests
 
