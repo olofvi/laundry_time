@@ -1,12 +1,12 @@
-require 'rails_helper'
-
 RSpec.describe LaundryRoom, type: :model do
+  subject { create(:laundry_room) }
 
-  before do
-    @laundry_room = LaundryRoom.create
+
+  it 'has laundry room has a schedule' do
+    expect(subject.schedule).to_not eq nil
   end
 
-  it 'has laundry room attributes' do
-    expect(@laundry_room).to have_attributes(time_type: :fixed, capacity_type: :closed)
+  it 'has laundry room has be of IceCube class  ' do
+    expect(subject.schedule.class).to eq IceCube::Schedule
   end
 end
