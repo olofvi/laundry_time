@@ -7,8 +7,7 @@ Feature: user should be able to book time in laundry room
     Given user visits the booking page
     
   Scenario: user can book a laundry time
-    And Show me the page
-    Given I see a list of available times
+    Given I see the text "Book a LaundryTime"
     And I see the text "08.00"
-    And I click on "book"
+    And I click on "Book"
     Then I should see the text "Booked"
