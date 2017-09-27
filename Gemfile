@@ -5,16 +5,18 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby '~> 2.4.0'
 gem 'devise'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.0', '>= 5.0.6'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+#sgem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'acts_as_bookable', git: 'https://github.com/CraftAcademy/acts_as_bookable', branch: 'master'
+gem 'acts_as_bookable', '~> 0.1.4'
+#gem 'acts_as_bookable'#, git: 'https://github.com/CraftAcademy/acts_as_bookable', branch: 'master'
 
 group :development, :test do
   gem 'pry-byebug'
