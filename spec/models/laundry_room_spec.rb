@@ -8,4 +8,8 @@ RSpec.describe LaundryRoom, type: :model do
   it 'has laundry room has be of IceCube class  ' do
     expect(subject.schedule.class).to eq IceCube::Schedule
   end
+
+  it 'should be bookable' do
+      expect(subject.bookable?).to be_truthy
+  end
 end
