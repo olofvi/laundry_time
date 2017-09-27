@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   root controller: :landing, action: :index
   resources :laundry_room
+  devise_for :users
 end
