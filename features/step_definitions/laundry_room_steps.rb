@@ -2,6 +2,10 @@ Given(/^user visits the booking page$/) do
   '/laundry_room'
 end
 
+Given(/^Show me the page$/) do
+  save_and_open_page
+end
+
 Given(/^I see a list of available times$/) do
   expect(page).to have_content
 end
