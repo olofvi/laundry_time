@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'laundry_room/index'
+
   root controller: :landing, action: :index
 
-
-  resources :laundry_room, path: '/laundry_room'
+  resources :laundry_room
 end
