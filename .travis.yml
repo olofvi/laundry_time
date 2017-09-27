@@ -1,18 +1,22 @@
 language: ruby
+notifications:
+  email: false
+  slack:
+    secure: sYPZKix0grVFgXpuxIKjDnaixKcD8p7dEtaGBHlZtl7mF6BOUHpT2pTHqygSne68O3ihUjCcri+JsLgOqnFEcAlmN8nV4NWVo9gNb4/3786L1FNOOvEzbpa9z/g8dlHL+2tMHtg3+NgWWBf88oqyQJppuzbaOxt/hmIjjad4qm8GPtrFTBpA631yTVMB8JGWSxqeJPYrYkThYufrwgqNf0+nfrXBIuXgVcyqM8UtMiDtyU/1QCZ+LBNMyslvm+AjcqUkKQQJFqrIsnuh6BnDC+PUXEfXYLb7EDIBwHPl3B2MifPkdDN93QBdCr8EIwYu9i2nSlCGubJrp//Jl4S90y+Yvpgt5SFtp3DMwy7aVeQI47wDTA7ys+UI+BsifRJEHiQuZCo1uGp7/s4R0b0FpjE6aGA8Osev4dtPM4qT2lVJqcEhVjd+2J/A7Ke/ZeGDGLnSZdTHPkUY3/qIddN2vG+Nh6y4XKIbFZcF4SFSBGl6/szBO+EgRjh3I797vTtIdkxDfWa9Wdni6lL3Z9HtssFVas9ibYAHobYTQcod3LCsHxdNnHm1/MFQXm1uEBHhmWSxGDp/RgCvXYWjqeXOroIwVYFPm1TSiIrYubEQIEc8JlGM+2QXz/wo/6idfyoplaPYogZEd/bzRqRpBOHnpE75Ib0b3B2RJF4GV4y9ue0=
 cache: bundler
 rvm:
   - 2.4.0
 before_script:
-  - bundle exec rake db:create --all
-  - bundle exec rake db:migrate
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate db:test:prepare
 script:
   - bundle exec rake ci:tests
-
 deploy:
   provider: heroku
   api_key:
-    secure: "F2zJw4cLlvJgf9J/5g2a5iDXixfL15T7AlxelzN1Mo3157JZVKewE6Z+erxkDvEFOzCG+cewDtFwSl0K9DNJ9ri/WOMseR4qQYf/AicGXABw4I3qct8A5AYHTLBLADQoSWB/RPNesqdUYJlNSo+PYwmlMyrS0Mrv3rsmMUURTizUczDpTe0NCNyvJktgXH1fvwsXJRynrCzuaJJKCos+ewmn4Z5XBdglPEtPSsFSfIJj/zOKYUEMgB298FEj3N1C8nS2r6Wadr2b6VgKPqJz/imeuJ8Vzk1jY4QmvuYo5cYJf2lLDeyBNrvTPEzLTcotWYjaeC75ZyGlYV6MJWUC8yLsbgFHP4LGn8aMXsmWOFyx2I63CZy7S9PfPnlpUvCfszcKLSNIziFPzD//SBZsLxyA3ovBPbu7DtHV3xt32PruT9Q3c4uZRgwJmRJNOWZ47Zh8bJhh21aU1YnVsb9pHQpqme7HvFNppjSR/WFwOmQv0x6hph1oajCYX9NIRGW7Qx0GZwszNSDgrWiwqUj4z3XT4IapMOlUnd/QKVF8b0l31MB7EC8O/v43Z7XEoqyzLz72lfUyhH6FTuIxY6QWnLM8YY+w+2SRglnFneymZLd+eltkZ7SLhGWI7q9K5LuWxA+VvUv+tyWglJpU6N34D4obJU+FuKTHHmgSPf7FXr0="
+    secure: F2zJw4cLlvJgf9J/5g2a5iDXixfL15T7AlxelzN1Mo3157JZVKewE6Z+erxkDvEFOzCG+cewDtFwSl0K9DNJ9ri/WOMseR4qQYf/AicGXABw4I3qct8A5AYHTLBLADQoSWB/RPNesqdUYJlNSo+PYwmlMyrS0Mrv3rsmMUURTizUczDpTe0NCNyvJktgXH1fvwsXJRynrCzuaJJKCos+ewmn4Z5XBdglPEtPSsFSfIJj/zOKYUEMgB298FEj3N1C8nS2r6Wadr2b6VgKPqJz/imeuJ8Vzk1jY4QmvuYo5cYJf2lLDeyBNrvTPEzLTcotWYjaeC75ZyGlYV6MJWUC8yLsbgFHP4LGn8aMXsmWOFyx2I63CZy7S9PfPnlpUvCfszcKLSNIziFPzD//SBZsLxyA3ovBPbu7DtHV3xt32PruT9Q3c4uZRgwJmRJNOWZ47Zh8bJhh21aU1YnVsb9pHQpqme7HvFNppjSR/WFwOmQv0x6hph1oajCYX9NIRGW7Qx0GZwszNSDgrWiwqUj4z3XT4IapMOlUnd/QKVF8b0l31MB7EC8O/v43Z7XEoqyzLz72lfUyhH6FTuIxY6QWnLM8YY+w+2SRglnFneymZLd+eltkZ7SLhGWI7q9K5LuWxA+VvUv+tyWglJpU6N34D4obJU+FuKTHHmgSPf7FXr0=
   app: laundrytime
   on:
     repo: CraftAcademy/laundry_time
     branch: develop
+  run: bundle exec rails db:migrate
