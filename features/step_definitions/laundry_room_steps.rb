@@ -9,7 +9,3 @@ end
 Given(/^I see the text "([^"]*)"$/) do |content|
   expect(page).to have_content content
 end
-
-Given(/^I click on "([^"]*)"$/) do |button|
-  click_button button
-end

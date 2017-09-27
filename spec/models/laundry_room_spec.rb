@@ -1,6 +1,5 @@
 RSpec.describe LaundryRoom, type: :model do
-  subject { create(:laundry_room) }
-
+  subject {create(:laundry_room)}
 
   it 'has laundry room has a schedule' do
     expect(subject.schedule).to_not eq nil
