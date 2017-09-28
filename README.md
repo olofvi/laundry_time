@@ -13,7 +13,7 @@ git clone https://github.com/CraftAcademy/laundry_time.git
 ### Prerequisites
 
   * ruby 2.4.0
-  * rails 5.1.4
+  * rails 5.0.6
 
 ### Installing
 
@@ -27,6 +27,8 @@ Run rake to see all the tests pass.
 ### Break down into end to end tests(?)
 
 Explain what these tests test and why
+
+They test creating the user model and sign up with both Rspec and Cucumber
 
 ```
 Give an example
@@ -51,10 +53,6 @@ We automatically deploy this app with [Heroku](https://www.heroku.com/).
 * [Act_as_bookable](https://github.com/tandusrl/acts_as_bookable)
 
 ## Contributing
-Coaches:
-* [Tochman](https://github.com/tochman)
-* [Diraoulo](https://github.com/diraulo)
-* [Faraznaeem](https://github.com/faraznaeem)
 
 ## Authors
 * [Olofvi](https://github.com/olofvi)
@@ -64,7 +62,11 @@ Coaches:
 * [Sajaas](https://github.com/Sajaas)
 
 ## License
-Open source.
+MIT license 
 
 ## Acknowledgments
 Built with help from the coaches and some cool gems. Thanks a lot!
+Coaches:
+* [Tochman](https://github.com/tochman)
+* [Diraoulo](https://github.com/diraulo)
+* [Faraznaeem](https://github.com/faraznaeem)
