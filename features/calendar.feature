@@ -6,5 +6,5 @@ Feature: User can go to landing page
   Scenario:
     Given I navigate to the index page
     And I click a link "Calendar"
-    Then show me the page
     Then I should be on the calendar page
+    Then show me the page
