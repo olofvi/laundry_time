@@ -62,7 +62,7 @@ We automatically deploy this app with [Heroku](https://www.heroku.com/).
 * [Devise](https://github.com/plataformatec/devise)
 * [Rails](https://github.com/rails/rails)
 * [Act_as_bookable](https://github.com/tandusrl/acts_as_bookable)
-* [Simple_calendar] (https://github.com/excid3/simple_calendar)
+* [Simple_calendar](https://github.com/excid3/simple_calendar)
 
 ## Contributing
 
