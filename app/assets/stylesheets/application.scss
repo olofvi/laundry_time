@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
 
 @at-root {
   @-ms-viewport { width: device-width; }
@@ -7,10 +9,4 @@
    background-color: rgb(204, 255, 253);
    margin-top: 50px;
    color: #633472;
-   h1 {
-     text-align: center;
-   }
-
-   h2 {
-     text-align: left;
-   }
+ }
