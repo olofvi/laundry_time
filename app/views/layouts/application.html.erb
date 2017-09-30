@@ -3,18 +3,32 @@
 <head>
   <title>LaundryTime</title>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "application.sass" %>
+  <style>
+    body {
+      background-color: rgb(204, 255, 253);
+      margin-top: 50px;
+      color: #633472;
+    h1 {
+      text-align: center;
+    }
 
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    h2 {
+      text-align: left;
+    }
+
+  </style>
+
 </head>
 
+
 <body>
-<% if current_user != nil %>
-    Logged in as: <%= current_user.email %>
-<% end %>
-<% flash.each do |message_type, message| %>
-    <%= content_tag(:div, message) %>
-<% end %>
-<%= yield %>
+<%= render 'shared/navigation' %>
+<div class="container">
+  <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message) %>
+  <% end %>
+  <%= yield %>
+</div>
 </body>
 </html>
