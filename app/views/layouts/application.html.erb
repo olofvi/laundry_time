@@ -3,18 +3,21 @@
 <head>
   <title>LaundryTime</title>
   <%= csrf_meta_tags %>
-
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 
+
 <body>
-<% if current_user != nil %>
-    Logged in as: <%= current_user.email %>
-<% end %>
-<% flash.each do |message_type, message| %>
-    <%= content_tag(:div, message) %>
-<% end %>
-<%= yield %>
+<%= render 'shared/navigation' %>
+<div class="container">
+  <% flash.each do |key, value| %>
+      <div class="text-center <%= flash_class(key) %>">
+        <%= value %>
+      </div>
+  <% end %>
+
+  <%= yield %>
+</div>
 </body>
 </html>
