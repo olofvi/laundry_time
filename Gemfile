@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'simple_calendar', '~> 2.0'
 gem 'acts_as_bookable', '~> 0.1.4'
 gem 'jquery-rails'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 group :development, :test do

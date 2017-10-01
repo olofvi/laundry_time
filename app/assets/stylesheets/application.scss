@@ -1,12 +1,5 @@
 @import "bootstrap";
-@import "bootstrap/nav";
-@import "bootstrap/navbar";
-
-@at-root {
-  @-ms-viewport { width: device-width; }
-}
  body {
    background-color: rgb(204, 255, 253);
-   margin-top: 50px;
    color: #633472;
  }
