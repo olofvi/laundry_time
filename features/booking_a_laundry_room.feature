@@ -19,3 +19,5 @@ Feature: user should be able to book time in laundry room
     And user visits the booking page
     When I try to access booking link for "01 Sep 08:00"
     Then I should see the text "The laundry room is fully booked"
+
+  Scenario: User can only have total 2 slots 
