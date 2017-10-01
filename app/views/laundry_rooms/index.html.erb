@@ -10,11 +10,11 @@
 
 <% if current_user %>
   <h1>Your bookings:</h1>
-    <% if current_user.bookings.any? %>
+  <% if current_user.bookings.any? %>
     <% current_user.bookings.each do |booking| %>
-        <ul>
-          <li><%= booking[:time].beginning_of_hour.to_formatted_s(:short) %></li>
-        </ul>
+      <ul>
+        <li><%= booking[:time].beginning_of_hour.to_formatted_s(:short) %></li>
+      </ul>
     <% end %>
   <% else %>
    <p>You don't have any bookings yet.</p>
