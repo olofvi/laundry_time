@@ -4,6 +4,7 @@ Feature: User can go to landing page
   I would like to see a calendar
 
   Scenario: User can navigate to calendar page
-    Given I navigate to the index
+    Given there is a user logged in
+    And I navigate to the index
     And I click on "Calendar"
     Then I should be on the calendar page
