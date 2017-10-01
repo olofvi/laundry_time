@@ -32,7 +32,7 @@ They test creating the user model and sign up with both Rspec and Cucumber
 
 Cucumber example:
 ```
-Scenario:
+Scenario: User can navigate to calendar page
   Given I navigate to the index page
   And I click a link "Calendar"
   Then I should be on the calendar page
@@ -68,7 +68,7 @@ We automatically deploy this app with [Heroku](https://www.heroku.com/).
 
 ## Authors
 * [Olofvi](https://github.com/olofvi)
-* [Nurlanemir](https://github.com/nurlanemir)
+* [NurlanEmir](https://github.com/nurlanemir)
 * [Magnus-thor](https://github.com/magnus-thor)
 * [BasilMawejje](https://github.com/BasilMawejje)
 * [Sajaas](https://github.com/Sajaas)
