@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light>
-  <a class="navbar-brand" href="#">LaundryTime</a>
+<nav class="navbar fixed-top navbar-light" style="background-color: #633472;">
+  <a class="navbar-brand" style="color: white" href="#">LaundryTime</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto" >
       <% if current_user %>
         <li class="nav-item">
           <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link'%>
